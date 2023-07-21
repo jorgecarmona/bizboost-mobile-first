@@ -115,8 +115,8 @@ h6 {
 }
 
 h1 {
-  font-size: 4em;
-  line-height: 1.5em;
+  font-size: 2.1em;
+  line-height: 1.72em;
 }
 h4,
 h5 {
@@ -133,6 +133,15 @@ ul {
   padding: 0;
 }
 
+ul li {
+  position: relative;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
 a {
   color: var(--body-text);
   text-decoration: none;
@@ -144,11 +153,7 @@ a {
 }
 
 a:hover,
-.logo:hover {
-  color: var(--primary);
-}
-
-.selected {
+.logo h2:hover {
   color: var(--primary);
 }
 
@@ -156,27 +161,52 @@ a:hover,
   opacity: 0.5;
 }
 
+.gradient-button {
+  padding: 15px 34.86px 16.08px 35px;
+  display: inline-block;
+  margin-top: 14px;
+  color: var(--white);
+  border-radius: 30px;
+  font-size: 0.9em;
+  font-weight: var(--bold);
+  line-height: 1.6em;
+  background: linear-gradient(
+    90deg,
+    var(--gradient-start) 0%,
+    var(--gradient-end) 100%
+  );
+}
+
+.gradient-button:hover {
+  background: var(--white);
+  color: var(--background);
+}
+
 /*=======================================
     Mobile First
 =========================================*/
 .blocks {
-  padding: 0 28px;
-}
-
-.blocks * {
-  border: 1px solid var(--body-text);
+  padding: 0 30px;
 }
 
 header {
   display: flex;
+  align-items: center;
 }
 
 .logo {
   flex: 3;
 }
 
+h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+
 .mobile {
   flex: 1;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .desktop {
@@ -189,14 +219,36 @@ header {
   justify-content: center;
 }
 
+.social ul {
+  column-gap: 25px;
+}
+
 main {
   display: flex;
   flex-direction: column;
+  padding: 42px 0;
+  margin: 0 auto;
 }
 
 main > * {
   display: flex;
   justify-content: center;
+  text-align: center;
+}
+
+.hero-tagline {
+  margin-top: 24px;
+}
+
+.hero-cta {
+  margin-top: 14px;
+}
+
+.hero-video video {
+  width: 100%;
+  max-width: 100%;
+  max-height: 600px;
+  object-fit: cover;
 }
 
 /*=======================================
@@ -206,12 +258,38 @@ main > * {
 }
 
 @media all and (min-width: 479px) {
+  .selected {
+    color: var(--primary);
+  }
+
+  .circle {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    position: absolute;
+    left: -11px;
+    top: -2px;
+  }
+
+  .circle:hover {
+    background: rgba(255, 255, 255, 0.25);
+  }
+
   .blocks {
     padding: 0 88px;
   }
 
+  .hero {
+    padding: 0 85px;
+  }
+
   .logo {
     flex: 1;
+  }
+
+  .logo h2 {
+    font-size: 32px;
+    font-weight: 700;
   }
 
   .mobile {
@@ -221,10 +299,21 @@ main > * {
   .desktop {
     flex: 3;
     display: flex;
+    column-gap: 35px;
     justify-content: center;
   }
 
   .social {
     flex: 1;
+  }
+
+  h1 {
+    font-size: 4em;
+    line-height: 1.72em;
+  }
+
+  main {
+    max-width: 760px;
+    /* padding: 70px 320px; */
   }
 }
