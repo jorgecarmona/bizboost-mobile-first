@@ -1,0 +1,26 @@
+{
+  "name": "bizboost-mobile-first",
+  "version": "1.0.0",
+  "description": "Mobile first verion of Bizboost",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jorgecarmona/bizboost-mobile-first.git"
+  },
+  "author": "Jorge Carmona",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jorgecarmona/bizboost-mobile-first/issues"
+  },
+  "homepage": "https://github.com/jorgecarmona/bizboost-mobile-first#readme",
+  "devDependencies": {
+    "prettier": "^3.0.0"
+  },
+  "prettier": {
+    "tabWidth": 2,
+    "useTabs": false
+  }
+}
