@@ -213,6 +213,10 @@ h2 {
   display: none;
 }
 
+.submenu {
+  display: none;
+}
+
 .social {
   flex: 3;
   display: flex;
@@ -296,11 +300,41 @@ main > * {
     display: none;
   }
 
+  .desktop > ul {
+    gap: 35px;
+  }
+
   .desktop {
     flex: 3;
     display: flex;
     column-gap: 35px;
     justify-content: center;
+  }
+
+  .desktop ul li {
+    position: relative;
+  }
+
+  .desktop ul li:nth-child(2):hover .submenu {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .submenu {
+    width: 230px;
+    background-color: var(--sub-menu-bg);
+    z-index: 99;
+  }
+
+  .submenu li {
+    min-width: 100%;
+    padding-left: 20px;
+    border: 1px solid var(--border-color);
+  }
+
+  .submenu li:hover {
+    padding-left: 30px;
   }
 
   .social {
