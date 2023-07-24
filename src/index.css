@@ -115,16 +115,32 @@ h6 {
 }
 
 h1 {
-  font-size: 2.1em;
+  font-size: 2.2em;
   line-height: 1.72em;
 }
+
+h2 {
+  font-size: 1.6em;
+  line-height: 1.29em;
+  text-transform: capitalize;
+  margin-top: 14px;
+}
+
+h3 {
+  font-size: 2.27em;
+  font-weight: var(--bold);
+}
+
 h4,
 h5 {
   font-weight: var(--bold);
 }
 
 h6 {
+  font-size: 0.8em;
   font-weight: var(--semi-bold);
+  text-transform: uppercase;
+  color: var(--body-text);
 }
 
 ul {
@@ -157,6 +173,11 @@ a:hover,
   color: var(--primary);
 }
 
+p {
+  font-size: 0.9em;
+  line-height: 1.575em;
+}
+
 .lowlight {
   opacity: 0.5;
 }
@@ -186,7 +207,7 @@ a:hover,
     Mobile First
 =========================================*/
 .blocks {
-  padding: 0 30px;
+  padding: 0 28px;
 }
 
 header {
@@ -196,11 +217,6 @@ header {
 
 .logo {
   flex: 3;
-}
-
-h2 {
-  font-size: 24px;
-  font-weight: 700;
 }
 
 .mobile {
@@ -255,6 +271,45 @@ main > * {
   object-fit: cover;
 }
 
+.our-services img {
+  width: 100%;
+}
+
+.our-services {
+  margin: 42px 0;
+}
+
+.our-services-layout figure {
+  display: flex;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.big-numbers {
+  margin-bottom: 42px;
+}
+
+.big-numbers {
+  display: flex;
+  flex-direction: column;
+  column-gap: 40px;
+}
+
+.number-box {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.number-box p {
+  margin-top: 0;
+}
+
+/* .big-numbers * {
+  border: 1px solid #fff;
+} */
+
 /*=======================================
     TABLET & DESKTOP BREAKPOINTS
 =========================================*/
@@ -283,7 +338,9 @@ main > * {
     padding: 0 88px;
   }
 
-  .hero {
+  .hero,
+  .our-services,
+  .big-numbers {
     padding: 0 85px;
   }
 
@@ -346,8 +403,35 @@ main > * {
     line-height: 1.72em;
   }
 
+  h2 {
+    font-size: 2.43em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+
   main {
     max-width: 760px;
-    /* padding: 70px 320px; */
+  }
+
+  .our-services-layout {
+    display: flex;
+  }
+
+  .our-services-layout > * {
+    flex: 1;
+  }
+
+  .our-services .content {
+    display: flex;
+    flex-direction: column;
+    padding: 0 12%;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .big-numbers {
+    flex-direction: row;
   }
 }
